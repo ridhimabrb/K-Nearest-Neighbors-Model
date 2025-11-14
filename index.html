@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>KNN Visualization</title>
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KNN Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- p5.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>K Nearest Neighbors Model Visualizer</h1>
+
+    <div class="controls">
+      <label>K Value: <span id="kValue">3</span></label>
+      <input type="range" id="kSlider" min="1" max="10" value="3">
+
+      <button id="regenBtn">Generate New Points</button>
+    </div>
+
+    <div id="canvasWrapper"></div>
+  </div>
+
   <script src="sketch.js"></script>
 </body>
 </html>
